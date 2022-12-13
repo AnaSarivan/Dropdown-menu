@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Dropdown Menu</title>
+    <style>
+        nav label {
+            cursor: pointer;
+            user-select: none;
+        }
+        nav label::after {
+            content: "⏷";
+        }
+        nav ul {
+            display: none;
+        }
+
+        nav input {
+           display: none;
+        }
+
+        nav input:checked+label+ul {
+            display: block;
+        }
+        nav input:checked+label::after {
+            content: "⏶";
+        }
+        nav {
+            background-color: rgb(216, 192, 161);
+            border-radius: 10px ;        
+            padding: 10px 20px;
+            width: 130px;
+            font-family: Arial;           
+        }
+        nav ul {           
+            border-radius: 8px;                  
+            list-style: none;            
+            margin-left: -30px;
+        }
+        li:first-child {
+            border-top: 0.5px dashed rgb(155, 146, 126);
+        }
+        a {
+            text-decoration: none;
+            line-height: 25px;
+            letter-spacing: 1px;
+            font-family: Arial;
+            padding: 5px 0;
+            display: block;
+            color: brown;
+            border-bottom: 0.5px dashed rgb(155, 146, 126);
+            text-align: center;                 
+        }
+
+        a:hover {
+            color: white;
+            background-color: rgb(210, 188, 132);
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="toggler"/>  
+        <label for="toggler">
+            Dropdown
+        </label>
+        <ul>
+            <li><a href="">Item 1</a></li>
+            <li><a href="">Item 2</a></li>
+            <li><a href="">Item 3</a></li>
+        </ul> 
+    </nav> 
+    
+</body>
+</html>
